@@ -18,3 +18,4 @@
         ci = commit -m
         psu = push --set-upstream origin
         orig = clean -f *.orig
+        orig-win = Get-ChildItem . -recurse -include *.orig | % { $file = $_; Remove-Item $file.FullName; "Deleted file: $($file.FullName)" }
